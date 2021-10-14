@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart'; // import this library
+import 'package:flutter/material.dart';
+import 'package:flutter_application_1/home_page.dart'; // import this library
 
 void main() {
   //used to entry by the flow control to the code
@@ -6,19 +7,9 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     // where all our widgets are called and write the structure
-    return MaterialApp(
-      home: Material(
-        child: Center(
-          child: Container(
-            child: Text("hi vinay"),
-          ),
-        ),
-      ),
-    );
+    return MaterialApp(home: HomePage());
   }
 }

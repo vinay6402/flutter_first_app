@@ -3,7 +3,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/utils/routes.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  String name = "";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +40,7 @@ class LoginPage extends StatelessWidget {
                 ),
                 SizedBox(height: 20), //space btwn widget
                 Text(
-                  "Welcome to TechGenie",
+                  "Welcome $name",
                   style: TextStyle(
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
@@ -58,6 +64,12 @@ class LoginPage extends StatelessWidget {
                           hintText: "Enter Username",
                           labelText: "Username",
                         ),
+                        onChanged: (value) {
+                          //on every change made inside this input form
+                          name = value;
+                          setState(
+                              () {}); //recall build fuction to rebuild the render to display updated values in widget
+                        },
                       ),
                       TextFormField(
                         obscureText: true, //hide the password
@@ -74,8 +86,9 @@ class LoginPage extends StatelessWidget {
                           backgroundColor: MaterialStateProperty.all<Color>(
                               Color.fromARGB(255, 108, 99, 255)),
                         ),
-                        onPressed: () {
+                        onPressed: () async {
                           //function to run onpress the button
+                          await Future.delayed(Duration(seconds: 1));
                           Navigator.pushNamed(context, MyRoutes.homeRoute);
                         },
                       ),

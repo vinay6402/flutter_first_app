@@ -16,7 +16,7 @@ class _LoginPageState extends State<LoginPage> {
   moveToHome() async {
     //custom fuction, which will navigate to home page
     if (_formKey.currentState!.validate()) {
-      await Future.delayed(Duration(seconds: 1));
+      await Future.delayed(Duration(seconds: 1)); //waits are delay for 1 second go for nexr line
       Navigator.pushNamed(context, MyRoutes.homeRoute);
     }
   }
@@ -78,7 +78,7 @@ class _LoginPageState extends State<LoginPage> {
                             hintText: "Enter Username",
                             labelText: "Username",
                           ),
-                          validator: (value) {
+                          validator: (value) { //fuction to valitdate input textfield or any other form elements
                             if (value!.isEmpty) {
                               return "Username name cannot be empty buddy!!";
                             }

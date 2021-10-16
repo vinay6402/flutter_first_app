@@ -15,10 +15,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // where all our widgets are called and write the structure
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false, //debug strip at top right corner will be disapperaed if this flag is false
       themeMode: ThemeMode.light, //use strict theme mode
-      theme: ThemeData(fontFamily: GoogleFonts.lato().fontFamily),
+      theme: ThemeData(
+          fontFamily: GoogleFonts.lato().fontFamily,
+          primarySwatch: Colors.deepPurple),
       darkTheme: ThemeData(primarySwatch: Colors.grey), //data for dark theme
+      initialRoute: MyRoutes.homeRoute, //routes to the page on inital open of app
       routes: {
         //path declare for routing the navigationflow
         "/": (context) => LoginPage(),

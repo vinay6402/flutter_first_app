@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner:
           false, //debug strip at top right corner will be disapperaed if this flag is false
       themeMode: ThemeMode.light, //use strict theme mode
-      theme: MyTheme.lightTheme(context),
+      theme: MyTheme.lightTheme(context), //for light theme
       darkTheme: MyTheme.darkTheme(context), //data for dark theme
       initialRoute:
           MyRoutes.homeRoute, //routes to the page on inital open of app

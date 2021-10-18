@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MyTheme {
+  //created class for custom themes
   static ThemeData lightTheme(BuildContext context) => ThemeData(
+      //return type ThemeData, fuction name lighttheme,context build from ThemeData in braces
       // primarySwatch: MaterialColor(Colors.white),
       fontFamily: GoogleFonts.lato().fontFamily,
       appBarTheme: AppBarTheme(

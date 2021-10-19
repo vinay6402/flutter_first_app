@@ -7,7 +7,7 @@ class MyTheme {
   //created class for custom themes
   static ThemeData lightTheme(BuildContext context) => ThemeData(
       //return type ThemeData, fuction name lighttheme,context build from ThemeData in braces
-      // primarySwatch: MaterialColor(Colors.white),
+      primaryColor: Colors.deepPurple,
       fontFamily: GoogleFonts.lato().fontFamily,
       appBarTheme: AppBarTheme(
           color: Colors.white,
